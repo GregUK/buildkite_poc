@@ -23,14 +23,14 @@ echo "--- Install helm done"
 echo "--- Getting info from machine"
 mkdir artifacts
 
-kubectl get secrets > artifacts/k8s_get_secrets.txt
+kubectl get secrets > artifacts/k8s_get_secrets.txt || true
 
-kubectl get namespaces > artifacts/k8s_namespaces.txt
+kubectl get namespaces > artifacts/k8s_namespaces.txt || true
 
 ls -alhR /var/secrets > artifacts/local_secrets_ls.txt
 
-helm version > artifacts/helm_info.txt
+helm version > artifacts/helm_info.txt || true
 
-helm list --all > artifacts/helm_usage.txt
+helm list --all > artifacts/helm_usage.txt || true
 
 echo "--- Done getting info"
