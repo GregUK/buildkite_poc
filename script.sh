@@ -23,7 +23,4 @@ helm version > artifacts/helm_info.txt
 
 helm list --all > artifacts/helm_usage.txt
 
-
-
-
-
+echo "--- Done getting info"
