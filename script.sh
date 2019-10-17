@@ -17,7 +17,9 @@ echo "Add Kubectl"
 chmod +x ./kubectl
 mv ./kubectl /usr/local/bin/kubectl
 echo "--- Setup kubectl done"
-
+echo "--- Install helm"
+curl -L https://git.io/get_helm.sh | bash
+echo "--- Install helm done"
 echo "--- Getting info from machine"
 mkdir artifacts
 
